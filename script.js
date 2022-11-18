@@ -1,6 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function generatePassword() {
+    const alpha = "abcdefghijklmnopqrstuvwxyz";
+    const specialChar = ""[]\{}|<>?//special characters
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
