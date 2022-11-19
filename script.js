@@ -26,6 +26,30 @@ function generatePassword() {
     }
     numChar_num = Math.floor(numChar_num);
 
+    const cbSpecial = document.querySelector('#special');
+    const cbUPPER = document.querySelector('#upper');
+    const cbLower= document.querySelector('#lower');
+    const cbNumbers = document.querySelector('#numbers');
+    const cbSpace = document.querySelector('#space');
+
+    if (cbSpecial.checked) {
+	possibleChars = possibleChars.concat(specialChar.split(""));
+    }
+    if (cbUPPER.checked) {
+	possibleChars = possibleChars.concat(alpha.toUpperCase().split(""));
+    }
+    if (cbLower.checked) {
+	possibleChars = possibleChars.concat(alpha.split(""));
+    }
+    if (cbNumbers.chcked) {
+	possibleChars = possibleChars.concat("0123456789".split(""));
+    }
+    if (cbSpace.checked) {
+	possibleChars = possibleChars.concat(" ");
+    }
+    
+    
+ /* BASIC CODE   
     // include special characters?
     if (confirm("Use $pec;@| characters?")) {
 	possibleChars = possibleChars.concat(specialChar.split(""));
@@ -33,21 +57,19 @@ function generatePassword() {
 	    possibleChars = possibleChars.concat(" ");
 	}
     }
-
     // include UPPER CASE?
     if (confirm("Use UPPER CASE letters?")) {
 	possibleChars = possibleChars.concat(alpha.toUpperCase().split(""));
     }
-
     // include lower case
     if (confirm("Use lower case letters?")) {
 	possibleChars = possibleChars.concat(alpha.split(""));
     }
-
     // include numbers?
     if (confirm("Use numbers")) {
 	possibleChars = possibleChars.concat("0123456789".split(""));
     }
+*/
 
     //build the passwords
     let character = "";
