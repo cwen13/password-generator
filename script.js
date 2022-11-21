@@ -21,8 +21,8 @@ function generatePassword() {
 
     // get length of password
     let numChar_num = Number(prompt("How many characters should you passwrod be?"));
-    while (isNaN(Number(numChar_num))) {
-	numChar_num = Number(prompt("Please enter a number."));
+    while (((numChar_num < 8) || (numChar_num > 128)) || isNaN(Number(numChar_num))) {
+	numChar_num = Number(prompt("Please enter a number between 8 and 128."));
     }
     numChar_num = Math.floor(numChar_num);
 
